@@ -1,6 +1,6 @@
 const express = require("express");
 const app = express();
-app.use(
+app.use(express.json()) 
 
 /* {
   title: str, 
@@ -14,7 +14,8 @@ app.use(
 */
 
 const adana = {
-  title: 'adana',
+  id: 1,
+  title: "adana",
   ingredients: [
     "1 kg ground lamb",
     "Kosher salt",
@@ -32,8 +33,8 @@ const adana = {
     "5. During last few minutes of cooking, place bread directly on top of kebabs in batches until heated through.",
     "6. Serve kebabs with warm bread, sumac onions, parsley, tomatoes, and pickled peppers."
   ],
-  author: "",
-  countryOfOrigin: "",
+  author: "Mohammad",
+  countryOfOrigin: "Turkey",
   course: "Main"
 }
 
@@ -61,14 +62,21 @@ app.get("/", function (request, response) {
 
 app.post("/recipes", function (request, response) {
     const recipe = request.body
-    if (valididateRecipe(recipe)) {
-        response.sendStatus(401)
+    if (!valididateRecipe(recipe)) {
+        response.sendStatus(400)
     }
-    response.send("recieved, thank you!")
+    recipes.push(recipe)
+    response.json(recipe)
 });
 
-app.get("/recipes", function(request, response) {
-    response.json(recipes)
+app.get("/recipes/:id?", function(request, response) {
+  const id = request.params.id;
+  const recipe = recipes.find(r => request.params.id == r.id)
+  response.json(recipe)
+  
+  //should this always return [recipe] and not a bare object? 
+  // I think its kind of a choice but personally think single object
 });
+
 
 app.listen(process.env.PORT);
