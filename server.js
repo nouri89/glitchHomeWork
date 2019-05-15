@@ -47,7 +47,7 @@ const recipes = [adana]
 function valididateRecipe(recipe) {
   if (!recipe ||
       !recipe.title ||
-      !recipe.ingreds ||
+      !recipe.ingredients ||
       !recipe.prepTime ||
       !recipe.steps ||
       !recipe.author ||
@@ -68,9 +68,9 @@ app.post("/recipes", function (request, response) {
     if (!valididateRecipe(recipe)) {
         response.sendStatus(400)
     }
-    recipe.id = recipes.length++
+    recipe.id = recipes.length+1
     recipes.push(recipe)
-    response.json(recipe)
+    response.status(201).json(recipe)
 });
 
 app.get("/recipes/:id?", function(request, response) {
@@ -78,15 +78,8 @@ app.get("/recipes/:id?", function(request, response) {
   if (!id) response.json(recipes)
   
   const recipe = recipes.find(r => id == r.id)
+  console.log(recipe)
   response.json(recipe)
-  
-  //should this always return [recipe] and not a bare object? 
-  // I think its kind of a choice but personally think single object
-  // it's kind of controvertial, JSON API is not the defacto REST API but:
-  // https://github.com/json-api/json-api/issues/268
-  
-  // also in JS some people argue always use === but I think in here 
-  // it makes sense to use == and not use parseInt()
 });
 
 
