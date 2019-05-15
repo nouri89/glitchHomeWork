@@ -78,7 +78,7 @@ app.get("/recipes/:id?", function(request, response) {
   if (!id) response.json(recipes)
   
   const recipe = recipes.find(r => id == r.id)
-  console.log(recipe)
+  if (recipe === undefined) response.sendStatus(404)
   response.json(recipe)
 });
 
