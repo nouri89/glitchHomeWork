@@ -160,5 +160,137 @@
     "author": "Gousto",
     "countryOfOrigin": "unknown",
     "course": "Main"
+  },
+  {
+    "id": 6,
+    "title": "Mirza Ghasemi",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Mirza-Qasemi_dish.jpg/2560px-Mirza-Qasemi_dish.jpg",
+    "Category": "Vegetarian",
+    "ingredients": [
+      "2 Aubergines",
+      "1 garlic",
+      "tomato paste",
+      "2tomatoes",
+      "1 egg",
+      "turmeric powder"
+    ],
+    "prepTime": 60,
+    "steps": [
+      "Grill barbique the Aubergines with skin its important for Aubergines to smell smokie after its barbiqued peal the skin off and slice it thin cuts.",
+      "Put the barbiqued Aubergines in the frying Pan add son flower oil to pan before adding the Aubergines.",
+      "While frying add chopped slice garlics to the pan and add turmeric powder to the mixture.",
+      "Stir-fry it then add cubic choped totmatos to the pan let that fry too.",
+      "Add tomato paste to the stew mixture stir it to make the stew colorful.",
+      "Add the end break the egg and Stir it let it get formed but make sure the egg is not hard."
+    ],
+
+    "author": "Alisina",
+    "countryOfOrigin": "Iran",
+    "course": "Starter/Main"
+  },
+  {
+    "id": 7,
+    "title": "Meatball",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/6/6c/Ineg%C3%B6l_k%C3%B6fte.jpg",
+    "category": "Meat",
+    "ingredients": [
+      "1 medium onion",
+      "1/2 bunch of parsley",
+      "2 tablespoons butter",
+      "1 pounds og ground meat",
+      "1/2 cup soft bread crumbs",
+      "1 egg",
+      "1 teaspoon salt",
+      "3 to 4 tablespoons butter or margarine, for cooking meatballs",
+      "3 tablespoons all-purpose flour",
+      "1 cups beef broth or bouillon"
+    ],
+    "prepTime": 60,
+    "steps": [
+      "Cook onion in 2 tablespoons of butter. 1 pounds of ground meat, 1/2 cup soft bread crumbs, 1 egg, 1 teaspoon salt mix.",
+      "Finely chop the parsley. Mix together and form into firm balls about 1-inch diameter.",
+      "Cook in small batches with a little butter or margarine and shake pan frequently to help prevent sticking.",
+      "When all meatballs have been browned on all sides, stir flour into pan drippings. Gradually stir in beef broth.",
+      "Stirring constantly, cook over low heat until thickened."
+    ],
+    "author": "Kadir",
+    "countryOfOrigin": "Turkey",
+    "course": "Main"
+  },
+  {
+    "id": 8,
+    "title": "Falafel",
+    "category": "Vegetarian",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Falafels_2.jpg/500px-Falafels_2.jpg",
+    "ingredients": [
+      "450g/16oz dried chickpeas, soaked overnight",
+      "3 large cloves garlic, finely chopped",
+      "¼ large bunch fresh parsley, leaves only",
+      "1 small onion, finely chopped (about twice as much as the amount of garlic)",
+      "2 medium potatoes, boiled until tender, then peeled",
+      "salt and freshly ground black pepper",
+      "¼ tsp bicarbonate of soda, dissolved in a little cold water",
+      "dried chilli flakes, to taste",
+      "1-2 tsp ground cumin",
+      "sunflower oil, for frying",
+      "3 tbsp tahini (sesame paste)",
+      "1 tbsp water, or as needed",
+      "1-2 lemons, juice only",
+      "1 clove garlic, finely chopped"
+    ],
+    "prepTime": "overnight",
+    "steps": [
+      "Drain, rinse and dry soaked the chickpeas. Place the chickpeas in a food processor with the garlic and the parsley and process until the mixture is roughly chopped. Add the onion and potatoes and the salt and freshly ground black pepper to taste and blend again. The mixture should retain some texture. Sprinkle the bicarbonate and water mixture over the top of the chickpea mixture and let it sit for about 30 minutes. Sprinkle the chilli flakes and cumin over the mixture and mix in lightly.",
+      "Form the mixture into balls, place on a baking tray, cover and refrigerate for about half an hour.",
+      "Heat enough oil to shallow fry in a deep, heavy-bottomed pan. The oil is ready when a breadcrumb dropped into it will sizzle gently. (CAUTION: Hot oil can be very dangerous. Do not leave unattended.) Carefully place a few balls of falafel into the hot oil and fry for a minute or two, until the outside is brown and crisp. Cook the falafel balls in batches, removing with a slotted spoon when cooked and draining on kitchen towels.",
+      "For the sauce, put three tablespoons of tahini into a deep dish. Add water a teaspoon at a time, until you have a mixture the consistency of thick cream (you may need a little more or a little less water). Add the juice of 1-2 lemons, to taste, and mix again. If the mixture becomes too thick, add a little water. Add the chopped garlic and mix again.",
+      "Serve the falafels with the tahini sauce."
+    ],
+    "author": "Roberta Sawalha / Julia Sawalha",
+    "countryOfOrigin": "UK",
+    "course": "Main"
+  },
+  {
+    "id": 9,
+    "title": "Lasagne, but not as you know it! This tasty alternative is made with succulent chicken thighs, cooked in oregano and chilli and simmered in a rich tomato sauce. Layered with fresh pasta and creamy cheese sauce, this comforting dinner idea and inventive lasagne recipe",
+    "category": "Meat",
+    "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Lasagne_-_stonesoup.jpg/1920px-Lasagne_-_stonesoup.jpg",
+    "ingredients": [
+      "2 tbsp olive oil",
+      "4 chicken thigh fillets, diced",
+      "2 onion, finely chopped",
+      "2 garlic clove, finely chopped",
+      "1 tsp dried oregano",
+      "2large pinch chilli flakes",
+      "1 tbsp tomato purée",
+      "800g tin chopped tomatoes",
+      "8 fresh lasagne sheets",
+      "40g butter",
+      "40g plain flour",
+      "400ml semi-skimmed milk",
+      "160g Cheddar -  grated",
+      "1 tsp English mustard" 
+    ],
+    "prepTime": 25,
+    "steps": [
+      "Preheat the oven to gas 6, 200°C, fan 180°C.",
+      "Heat the oil in a frying pan.",
+      "Add the chicken and brown.",
+      "Set aside in a bowl.",
+      "Add the onion and garlic to the pan; cook for 5 mins, or until softened.",
+      "Stir in the oregano, chilli, tomato purée and tomatoes, then return the chicken with any juices; season.",
+      "Bring to the boil, then simmer for 5 mins.",
+      "For the sauce, melt the butter in a pan, then stir in the flour; cook for 1 min.",
+      "Gradually add the milk. Bring to the boil, then simmer, stirring, for 5 mins.",
+      "Remove from the heat. Stir in 60g cheese and the mustard; season.",
+      "Spoon half the chicken mixture into a small baking dish.",
+      "Top with 2 lasagne sheets, then the remaining chicken.",
+      "Top with the last 2 lasagne sheets. Pour over the sauce and scatter over the remaining cheese.",
+      "Bake for 20 mins, or until golden."
+  
+    ],
+    "author": "Madiha",
+    "countryOfOrigin": "Turkey",
+    "course": "Main"
   }
 ]

@@ -1,38 +1,15 @@
 const express = require("express")
 const cors = require("cors")
+
 const recipes = require('./recipes.json')
+const { valididateRecipe } = require("./recipes.js")
+
 const app = express()
+
 app.use(express.json())
 app.use(cors())
 
-/* {
-  name: str, 
-  ingreds: []str, 
-  prepTime: num,  // minutes?
-  steps: []str, 
-  author: str,
-  countryOfOrigin: str,
-  course: enum[Starter, Main, Dessert]
-}
-*/
-
-
-function valididateRecipe(recipe) {
-  if (!recipe ||
-      !recipe.name ||
-      !recipe.ingredients ||
-      !recipe.prepTime ||
-      !recipe.steps ||
-      !recipe.author ||
-      !recipe.countryOfOrigin ||
-      !recipe.course) {
-    console.log(' bad ', { recipe })
-    return false
-  }
-  return true
-}
   
-
 app.get("/", function (request, response) {
     response.send("Welcome to CYF recipes");
 });
