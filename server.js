@@ -1,7 +1,7 @@
 const express = require("express")
 const cors = require("cors")
 
-const recipes = require('./recipes.json')
+let recipes = require('./recipes.json')
 const { valididateRecipe } = require("./recipes.js")
 
 const app = express()
@@ -34,12 +34,15 @@ app.get("/recipes/:id?", function(request, response) {
 });
 
 app.delete("/recipes", function (request, response) {
-  const id = request.body;
+  const id = request.body.id;
   if (id === undefined) return response.sendStatus(400)
   
-  console.log('would remove', id)
+  const recipe = recipes.find(item => item.id === parseInt(id))
+  if (recipe === undefined) return response.sendStatus(404)
+
+  recipes = recipes.filter((item) => { return item.id !== parseInt(id) })
+  response.sendStatus(204)
+  
 })
-
-
 
 app.listen(process.env.PORT);
