@@ -11,7 +11,7 @@ app.use(cors())
 
   
 app.get("/", function (request, response) {
-    response.send("Welcome to CYF recipes");
+    response.send("Welcome to CYF recipes server");
 });
 
 app.get("/recipes/:id?", function(request, response) {
