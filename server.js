@@ -33,16 +33,16 @@ app.get("/recipes/:id?", function(request, response) {
   response.json(recipe)
 });
 
-app.delete("/recipes", function (request, response) {
-  const id = request.body.id;
+app.delete("/recipes/:id", function (request, response) {
+  const id = request.params.id;
   if (id === undefined) return response.sendStatus(400)
   
-  const recipe = recipes.find(item => item.id === parseInt(id))
+  const recipe = recipes.find(item => item.id == id)
   if (recipe === undefined) return response.sendStatus(404)
 
-  recipes = recipes.filter((item) => { return item.id !== parseInt(id) })
+  recipes = recipes.filter((item) => { return item.id != id })
   response.sendStatus(204)
-  
 })
+
 
 app.listen(process.env.PORT);
