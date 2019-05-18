@@ -14,6 +14,15 @@ app.get("/", function (request, response) {
     response.send("Welcome to CYF recipes");
 });
 
+app.get("/recipes/:id?", function(request, response) {
+  const id = request.params.id;
+  if (!id) return response.json(recipes)
+  
+  const recipe = recipes.find(r => id == r.id)
+  if (recipe === undefined) return response.sendStatus(404)
+  response.json(recipe)
+});
+
 app.post("/recipes", function (request, response) {
     const recipe = request.body
     if (!valididateRecipe(recipe)) {
@@ -22,15 +31,6 @@ app.post("/recipes", function (request, response) {
     recipe.id = recipes.length+1
     recipes.push(recipe)
     response.status(201).json(recipe)
-});
-
-app.get("/recipes/:id?", function(request, response) {
-  const id = request.params.id;
-  if (!id) return response.json(recipes)
-  
-  const recipe = recipes.find(r => id == r.id)
-  if (recipe === undefined) return response.sendStatus(404)
-  response.json(recipe)
 });
 
 app.delete("/recipes/:id", function (request, response) {
