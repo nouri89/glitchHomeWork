@@ -6,7 +6,7 @@ app.use(express.json())
 app.use(cors())
 
 /* {
-  title: str, 
+  name: str, 
   ingreds: []str, 
   prepTime: num,  // minutes?
   steps: []str, 
@@ -18,7 +18,7 @@ app.use(cors())
 
 const adana = {
   id: 1,
-  title: "adana",
+  name: "adana",
   ingredients: [
     "1 kg ground lamb",
     "Kosher salt",
@@ -27,6 +27,7 @@ const adana = {
     "4 tablespoon ground Urfa pepper flakes, divided",
     "4 tablespoons ice-cold water"
   ],
+  image: "https://upload.wikimedia.org/wikipedia/commons/5/55/Adana_kebab.jpg",
   prepTime: 60,
   steps: [
     "1. For the Kebabs: Combine lamb with 7.5 grams (about 2 teaspoons) kosher salt, 1 teaspoon cumin, 2 teaspoons sumac, and 1 tablespoon pepper flakes. Knead by hand or in a stand mixer fitted with a paddle attachment until mixture turns tacky and starts sticking to the side of the bowl. Add water and continue kneading until incorporated. Place in refrigerator and chill well.",
@@ -38,11 +39,12 @@ const adana = {
   ],
   author: "Mohammad",
   countryOfOrigin: "Turkey",
+  category: "Meat",    
   course: "Main"
 }
 
 
-const recipes = [adana]
+const recipes = [adana, adana, adana]
 
 function valididateRecipe(recipe) {
   if (!recipe ||
