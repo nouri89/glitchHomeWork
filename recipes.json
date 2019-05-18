@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "title": "adana",
+    "title": "Adana",
     "ingredients": [
       "1 kg ground lamb",
       "Kosher salt",
@@ -165,7 +165,7 @@
     "id": 6,
     "title": "Mirza Ghasemi",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Mirza-Qasemi_dish.jpg/2560px-Mirza-Qasemi_dish.jpg",
-    "Category": "Vegetarian",
+    "category": "Vegetarian",
     "ingredients": [
       "2 Aubergines",
       "1 garlic",
@@ -252,7 +252,8 @@
   },
   {
     "id": 9,
-    "title": "Lasagne, but not as you know it! This tasty alternative is made with succulent chicken thighs, cooked in oregano and chilli and simmered in a rich tomato sauce. Layered with fresh pasta and creamy cheese sauce, this comforting dinner idea and inventive lasagne recipe",
+    "title": "Lasagne",
+    "notes": "not as you know it! This tasty alternative is made with succulent chicken thighs, cooked in oregano and chilli and simmered in a rich tomato sauce. Layered with fresh pasta and creamy cheese sauce, this comforting dinner idea and inventive lasagne recipe",
     "category": "Meat",
     "image": "https://upload.wikimedia.org/wikipedia/commons/thumb/b/ba/Lasagne_-_stonesoup.jpg/1920px-Lasagne_-_stonesoup.jpg",
     "ingredients": [
@@ -269,7 +270,7 @@
       "40g plain flour",
       "400ml semi-skimmed milk",
       "160g Cheddar -  grated",
-      "1 tsp English mustard" 
+      "1 tsp English mustard"
     ],
     "prepTime": 25,
     "steps": [
@@ -287,10 +288,79 @@
       "Top with 2 lasagne sheets, then the remaining chicken.",
       "Top with the last 2 lasagne sheets. Pour over the sauce and scatter over the remaining cheese.",
       "Bake for 20 mins, or until golden."
-  
     ],
     "author": "Madiha",
     "countryOfOrigin": "Turkey",
+    "course": "Main"
+  },
+  {
+    "id": 10,
+    "title": "Boiled Egg",
+    "category": "Vegetarian",
+    "image": "https://www.deliaonline.com/sites/default/files/quick_media/cs-hard-boiled-eggs.jpg",
+    "ingredients": ["1 Egg"],
+    "prepTime": 10,
+    "steps": [
+      "Simply put the egg in water and boil it for 10 minutes, Enjoy!."
+    ],
+    "author": "Mohammad",
+    "countryOfOrigin": "International",
+    "course": "Main"
+  },
+  {
+    "id": 11,
+    "category": "Vegetarian",
+    "title": "Oat Banana milkshake",
+    "image": "http://www.runningwithspoons.com/wp-content/uploads/2016/05/Banana-Oat-Breakfast-Smoothie.jpg",
+    "ingredients": [
+      "1 tbsp porridge oats",
+      "80g soft fruits (e.g. strawberries, blueberries, and mango all work well)",
+      "150ml milk",
+      "1 tbsp honey",
+      "1 tsp vanilla extract"
+    ],
+    "prepTime": 2,
+    "steps": [
+      "Put all the ingredients in a blender and whizz for 1 min until smooth.",
+      "Pour the mixture into two glasses to serve."
+    ],
+    "author": "Emma Freud",
+    "countryOfOrigin": "England",
+    "course": "Smoothie"
+  },
+  {
+    "id": 12,
+    "category": "Vegetarian",
+    "image": "https://naturallyella.com/wp-content/uploads/2017/03/berbere_lentil_stew-2.jpg",
+    "title": "Berbere lentils and tomatoes with ginger and cardamom",
+    "ingredients": [
+      "2 tbsp olive oil",
+      "1 onion, peeled and finely chopped",
+      "1½ tsp berbere spice mix",
+      "½ tsp ground turmeric",
+      "5 large plum tomatoes, finely chopped",
+      "1 tbsp tomato paste",
+      "Salt to your taste",
+      "3 garlic cloves, peeled and crushed",
+      "2cm piece fresh ginger, peeled and finely chopped",
+      "1 tsp ground cumin",
+      "8 cardamom pods, seeds removed and roughly ground in a mortar",
+      "200g red split lentils, soaked in water for 10 minutes, then drained",
+      "10g fresh coriander (about 3½ tbsp), roughly chopped"
+    ],
+    "prepTime": 15,
+    "Cook": 40,
+    "Serves": 4,
+    "steps": [
+      "Heat the oil in a large saute pan on a medium-high flame, then fry the onion for eight to nine minutes, stirring frequently, until soft and caramelised.",
+      "Add the berbere spice mix and turmeric, stir for a minute, until aromatic, then add three of the chopped tomatoes (about 300g), the tomato paste and a teaspoon and a quarter of salt.",
+      " Cook for three minutes, so the tomatoes start to break down, then stir in the garlic, ginger, cumin and cardamom, and cook, stirring continuously for two minutes.",
+      "Add the lentils, then pour in 500ml water and bring to a boil.",
+      "Turn down the heat to medium, and simmer for 15 minutes, stirring every once in a while, until the lentils are nearly soft and most of the liquid has been absorbed.",
+      "Add the remaining tomatoes and cook for five minutes more. Stir in the coriander just before serving."
+    ],
+    "author": "Mussie",
+    "countryOfOrigin": "Eritrea",
     "course": "Main"
   }
 ]
