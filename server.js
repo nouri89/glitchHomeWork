@@ -33,5 +33,13 @@ app.get("/recipes/:id?", function(request, response) {
   response.json(recipe)
 });
 
+app.delete("/recipes", function (request, response) {
+  const id = request.body;
+  if (id === undefined) return response.sendStatus(400)
+  
+  console.log('would remove', id)
+})
+
+
 
 app.listen(process.env.PORT);
