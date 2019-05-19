@@ -26,9 +26,9 @@ app.get("/recipes/:id?", function(request, response) {
 
 app.post("/recipes", function (request, response) {
     const recipe = request.body
-   // if (!valididateRecipe(recipe)) {
-     //   return response.sendStatus(400)
-   // }
+    // if (!valididateRecipe(recipe)) {
+    //   return response.sendStatus(400)
+    // }
     recipe.id = recipes.length+1
     recipes.push(recipe)
     response.status(201).json(recipe)
