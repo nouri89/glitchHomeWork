@@ -9,7 +9,6 @@ const app = express()
 app.use(express.json())
 app.use(cors())
 
-  
 app.get("/", function (request, response) {
     response.send("Welcome to CYF recipes server");
 });
@@ -20,8 +19,7 @@ app.get("/recipes/:id?", function(request, response) {
   
   const recipe = recipes.find(r => id == r.id)
   if (recipe === undefined) return response.sendStatus(404)
-  response.json(recipe)
-});
+  response.json(recipe)s);
 
 app.post("/recipes", function (request, response) {
     const recipe = request.body
@@ -45,3 +43,4 @@ app.delete("/recipes/:id", function (request, response) {
 })
 
 app.listen(process.env.PORT);
+s
