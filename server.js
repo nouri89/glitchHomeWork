@@ -19,7 +19,10 @@ app.get("/recipes/:id?", function(request, response) {
   
   const recipe = recipes.find(r => id == r.id)
   if (recipe === undefined) return response.sendStatus(404)
-  response.json(recipe)s);
+  response.json(recipes);
+});
+
+
 
 app.post("/recipes", function (request, response) {
     const recipe = request.body
@@ -43,4 +46,3 @@ app.delete("/recipes/:id", function (request, response) {
 })
 
 app.listen(process.env.PORT);
-s
