@@ -1,6 +1,6 @@
 exports.valididateRecipe = (recipe) => {
   if (!recipe ||
-      !recipe.name ||
+      !recipe.title ||
       !recipe.ingredients ||
       !recipe.prepTime ||
       !recipe.steps ||
