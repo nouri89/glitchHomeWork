@@ -15,7 +15,6 @@ app.get("/", function(request, response) {
 
 app.get("/recipes/:id", function(request, response) {
   const id = request.params.id;
-
   const recipe = recipes.find(r => id == r.id);
   if (recipe) {
     response.json(recipe);
@@ -28,6 +27,16 @@ app.get("/recipes", function(request, response) {
     response.json(recipes);
 });
 
+function updateRecipeInPlace(orig, changes){
+  orig.title = changes.title;
+  orig.ingredients = changes.ingredients;
+  orig.prepTime = changes.prepTime;
+  orig.steps = changes.steps;
+  orig.author = changes.author;
+  orig.countryOfOrigin = changes.countryOfOrigin;
+  orig.course = changes.course;
+}
+
 app.post("/recipes", function(request, response) {
   const recipe = request.body;
   // if (!valididateRecipe(recipe)) {
@@ -38,17 +47,30 @@ app.post("/recipes", function(request, response) {
   response.status(201).json(recipe);
 });
 
+app.put("/recipes/:id", function(request, response) {
+  const id = request.params.id
+  
+  const recipeSubmitted = request.body;
+
+  const existingRecipe = recipes.find(r => id == r.id);
+  if (existingRecipe) {
+    updateRecipeInPlace(existingRecipe, recipeSubmitted);
+    response.json(existingRecipe);
+  } else {
+    response.sendStatus(404);
+  }  
+});
+
 app.delete("/recipes/:id", function(request, response) {
   const id = request.params.id;
-  if (id === undefined) return response.sendStatus(400);
 
-  const recipe = recipes.find(item => item.id == id);
-  if (recipe === undefined) return response.sendStatus(404);
-
-  recipes = recipes.filter(item => {
-    return item.id != id;
-  });
-  response.sendStatus(204);
+  const indexToDelete = recipes.findIndex(item => item.id == id);
+  if (indexToDelete >= 0){
+    recipes.splice(indexToDelete, 1);
+    response.sendStatus(204);
+  } else {
+    response.sendStatus(404);    
+  }
 });
 
 app.listen(process.env.PORT);
