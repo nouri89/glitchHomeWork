@@ -36,9 +36,7 @@ app.post("/recipes", function(request, response) {
 
 app.put("/recipes/:id", function(request, response) {
   const id = request.params.id;
-
   const recipeSubmitted = request.body;
-
   const existingRecipe = recipes.find(r => id == r.id);
   if (existingRecipe) {
     updateRecipeInPlace(existingRecipe, recipeSubmitted);
