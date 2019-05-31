@@ -17,6 +17,16 @@ app.get("/recipes", function(request, response) {
   response.json(recipes);
 });
 
+app.get("/recipes/search", function(request, response) {
+  const term = request.query.term;
+  const matchingRecipes = recipes.find(r => r.title.includes(term));
+  if (matchingRecipes) {
+    response.json(matchingRecipes);
+  } else {    
+    response.sendStatus(404);
+  }
+});
+
 app.get("/recipes/:id", function(request, response) {
   const id = request.params.id;
   const recipe = recipes.find(r => id == r.id);
