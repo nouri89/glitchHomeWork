@@ -1,6 +1,6 @@
 
 
-function valididateRecipe(recipe) {
+function validateRecipe(recipe) {
   if (!recipe ||
       !recipe.title ||
       !recipe.ingredients ||
@@ -26,4 +26,4 @@ function updateRecipeInPlace(orig, changes) {
   orig.course = changes.course;
 }
 
-exports = { updateRecipeInPlace, valididateRecipe};
+module.exports = { updateRecipeInPlace, validateRecipe };
