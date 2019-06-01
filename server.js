@@ -1,33 +1,36 @@
 const express = require("express");
 const cors = require("cors");
 
-const recipes = require("./recipes.json");
-const { validateRecipe, updateRecipeInPlace } = require("./recipes.js");
 
 const app = express();
 
 app.use(express.json());
 app.use(cors());
 
+let customers = [
+  {
+    id: 0,
+    name: "Jon Smith"
+  },
+  {
+    id: 1,
+    name: "Fatima Hussain"
+  },
+  {
+    id: 2,
+    name: "Carlos Santana"
+  }
+]
 let nextIndex = 100;
 
 app.get("/", function(request, response) {
-  response.send("Welcome to CYF recipes server");
+  response.send("Welcome to CYF customers server");
 });
 
-app.get("/recipes", function(request, response) {
-  response.json(recipes);
-});
-
-app.get("/recipes/search", function(request, response) {
-  const term = request.query.term;
-  const matchingRecipes = recipes.filter(r => r.title.includes(term));
-  response.json(matchingRecipes);
-});
-
-app.get("/recipes/:id", function(request, response) {
-  const id = parseInt(request.params.id);
-  const recipe = recipes.find(r => id === r.id);
+app.get("/customers/:id", function(request, response) {
+  // no typed id
+  const id = request.params.id;
+  const recipe = customers.find(r => id === r.id);
   if (recipe) {
     response.json(recipe);
   } else {
@@ -35,36 +38,35 @@ app.get("/recipes/:id", function(request, response) {
   }
 });
 
-app.post("/recipes", function(request, response) {
+app.post("/customers", function(request, response) {
   const recipe = request.body;
-  recipe.id = nextIndex++;
-  recipes.push(recipe);
+  // no new id
+  customers.push(recipe);
   response.status(201).json(recipe);
 });
 
-app.put("/recipes/:id", function(request, response) {
+app.put("/customers/:id", function(request, response) {
   const id = parseInt(request.params.id);
 
   const recipeSubmitted = request.body;
-  const existingRecipe = recipes.find(r => id === r.id);
+  const existingRecipe = customers.find(r => id === r.id);
   if (existingRecipe) {
-    updateRecipeInPlace(existingRecipe, recipeSubmitted);
+    existingRecipe = recipeSubmitted;
+    // no check for id
     response.json(existingRecipe);
   } else {
     response.sendStatus(404);
   }
 });
 
-app.delete("/recipes/:id", function(request, response) {
-  const id = parseInt(request.params.id);
-
-  const indexToDelete = recipes.findIndex(item => id === item.id );
+app.delete("/customers/:id", function(request, response) {
+  const id = request.params.id // no typed id
+  const indexToDelete = customers.findIndex(item => id === item.id );
   if (indexToDelete >= 0) {
-    recipes.splice(indexToDelete, 1);
+    customers.splice(indexToDelete, 1);
     response.sendStatus(204);
-  } else {
-    response.sendStatus(404);
   }
+  // no 404
 });
 
 app.listen(process.env.PORT);
