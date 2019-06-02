@@ -28,7 +28,6 @@ app.get("/", function(request, response) {
 });
 
 app.get("/customers/:id", function(request, response) {
-  // no typed id
   const id = request.params.id;
   const recipe = customers.find(r => id === r.id);
   if (recipe) {
@@ -40,7 +39,6 @@ app.get("/customers/:id", function(request, response) {
 
 app.post("/customers", function(request, response) {
   const recipe = request.body;
-  // no new id
   customers.push(recipe);
   response.status(201).json(recipe);
 });
@@ -52,7 +50,6 @@ app.put("/customers/:id", function(request, response) {
   const existingRecipe = customers.find(r => id === r.id);
   if (existingRecipe) {
     existingRecipe = recipeSubmitted;
-    // no check for id
     response.json(existingRecipe);
   } else {
     response.sendStatus(404);
@@ -66,7 +63,6 @@ app.delete("/customers/:id", function(request, response) {
     customers.splice(indexToDelete, 1);
     response.sendStatus(204);
   }
-  // no 404
 });
 
 app.listen(process.env.PORT);
