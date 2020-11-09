@@ -3,8 +3,8 @@
 *    The bug in this program  was 
   1)-missing version of the express and cors inside the "dependencies"
       
-  2) In the find function the compartion has to have only to ignore the 
-  typeof value
+  2) In the find function the compartion has to have only == instead of ===
+  to ignore the   typeof value.
                                                                         *
 ***********************************************************************/
 
