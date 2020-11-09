@@ -1,8 +1,10 @@
 /************************************************************************
 *                                                                       *
-*    The bug in this program  was  missing version of the express and
-      cors    inside the   "dependencies"
+*    The bug in this program  was 
+  1)-missing version of the express and cors inside the "dependencies"
       
+  2) In the find function the compartion has to have only to ignore the 
+  typeof value
                                                                         *
 ***********************************************************************/
 
@@ -37,7 +39,7 @@ app.get("/", function(request, response) {
 
 app.get("/customers/:id", function(request, response) {
   const id = request.params.id;
-  const recipe = customers.find(r => id === r.id);
+  const recipe = customers.find(r => id == r.id);
   if (recipe) {
     response.json(recipe);
   } else {
@@ -48,7 +50,7 @@ app.get("/customers/:id", function(request, response) {
 app.post("/customers", function(request, response) {
   const recipe = request.body;
   customers.push(recipe);
-  response.status(201).json(recipe);
+  response.json(recipe);
 });
 
 app.put("/customers/:id", function(request, response) {
