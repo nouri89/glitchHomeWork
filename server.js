@@ -75,4 +75,10 @@ app.delete("/customers/:id", function(request, response) {
   }
 });
 
-app.listen(process.env.PORT);
+let port = process.env.PORT || 4004;
+const listener = app.listen(port, function () {
+	console.log("Your app is listening on port " + port);     
+});
+
+//app.listen(9000);
+//process.env.PORT
