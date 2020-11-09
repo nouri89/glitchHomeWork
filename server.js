@@ -42,6 +42,7 @@ app.get("/customers/:id", function(request, response) {
   const recipe = customers.find(r => id == r.id);
   if (recipe) {
     response.json(recipe);
+    console.log("done")
   } else {
     response.sendStatus(404);
   }
